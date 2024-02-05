@@ -1,0 +1,40 @@
+.navbar-bot {
+  display: flex;
+  align-items: center;
+  /* background-color: #1e73be;  */
+  padding: 1em;
+  border-bottom: solid #fffffa;
+  margin-right: 10em;
+  margin-left: 10em;
+  height: 100%;
+}
+
+.navbar-bot p {
+  margin: 0 1em;
+  color: rgb(84, 84, 84); /* Text color */
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.navbar-bot p:hover {
+  color: #896e00;
+}
+
+.image-logo {
+  width: 15vh;
+  height: 12vh;
+  margin-right: auto;
+  margin-left: 15em;
+}
+
+@media (max-width: 768px) {
+  .navbar-bot {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .image-logo {
+    margin-bottom: 1em;
+    margin-right: 0;
+  }
+}

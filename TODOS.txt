@@ -1,0 +1,5 @@
+Add english translation to navbar
+
+add images with SwiperAPI   
+
+change title icon
