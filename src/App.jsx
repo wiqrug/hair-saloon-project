@@ -10,10 +10,15 @@ import Navbar from "./components/Navbar";
 // import "primeicons/primeicons.css";
 
 function App() {
+  const countries = [
+    { name: "🇬🇷", code: "GR" },
+    { name: "🇺🇸", code: "EN" },
+  ];
+
   return (
     <PrimeReactProvider>
       <NavbarTop />
-      <Navbar />
+      <Navbar countries={countries} />
     </PrimeReactProvider>
   );
 }

@@ -4,16 +4,11 @@ import "./navbar.css";
 import anelImage from "../assets/anel.png";
 import { Dropdown } from "primereact/dropdown";
 
-const Navbar = () => {
-  const countries = [
-    { name: "🇬🇷", code: "GR" },
-    { name: "🇺🇸", code: "EN" },
-  ];
-
+const Navbar = ({ countries }) => {
   const languages = [
     {
       code: "GR",
-      home: "HOME",
+      home: "ΚΕΝΤΡΙΚΗ ΣΕΛΙΔΑ",
       aboutUs: "ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ",
       services: "ΥΠΗΡΕΣΙΕΣ",
       photoGallery: "ΦΩΤΟΓΡΑΦΙΕΣ",
@@ -28,7 +23,6 @@ const Navbar = () => {
       contactUs: "CONTACT US",
     },
   ];
-
   const [selectedLanguage, setSelectedLanguage] = useState(countries[0]);
   const [details, setDetails] = useState(
     languages.find((lang) => lang.code == selectedLanguage.code)
@@ -41,14 +35,17 @@ const Navbar = () => {
     setDetails(newDetails);
   }, [selectedLanguage]);
 
+  // @ts-ignore
+  console.log(Object.entries(details));
   return (
     <div className="navbar-bot">
       <img className="image-logo" src={anelImage} alt="ΑΝΕΛ"></img>
-      <p>{details?.home}</p>
-      <p>{details?.aboutUs}</p>
-      <p>{details?.services}</p>
-      <p>{details?.photoGallery}</p>
-      <p>{details?.contactUs}</p>
+      {details &&
+        Object.entries(details).map(([key, value]) => {
+          if (key !== "code") {
+            return <p key={key}>{value}</p>;
+          }
+        })}
       <Dropdown
         value={selectedLanguage}
         onChange={(e) => setSelectedLanguage(e.value)}

@@ -1,5 +1,5 @@
-Add english translation to navbar
+the translation should also happen to the upper navbar, so i need to fix this
 
-add images with SwiperAPI   
+code already needs refactoring
 
-change title icon
+i need to use context
