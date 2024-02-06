@@ -3,9 +3,10 @@ import "./navbar.css";
 // @ts-ignore
 import anelImage from "../assets/anel.png";
 import { Dropdown } from "primereact/dropdown";
+import { useLanguage } from "../hooks/LanguageContext";
 
-const Navbar = ({ countries }) => {
-  const languages = [
+const Navbar = () => {
+  const translatedTextNavbar = [
     {
       code: "GR",
       home: "ΚΕΝΤΡΙΚΗ ΣΕΛΙΔΑ",
@@ -23,20 +24,19 @@ const Navbar = ({ countries }) => {
       contactUs: "CONTACT US",
     },
   ];
-  const [selectedLanguage, setSelectedLanguage] = useState(countries[0]);
+  const { selectedLanguage, setSelectedLanguage, countries } = useLanguage();
+
   const [details, setDetails] = useState(
-    languages.find((lang) => lang.code == selectedLanguage.code)
+    translatedTextNavbar.find((lang) => lang.code == selectedLanguage.code)
   );
 
   useEffect(() => {
-    const newDetails = languages.find(
+    const newDetails = translatedTextNavbar.find(
       (lang) => lang.code == selectedLanguage.code
     );
     setDetails(newDetails);
   }, [selectedLanguage]);
 
-  // @ts-ignore
-  console.log(Object.entries(details));
   return (
     <div className="navbar-bot">
       <img className="image-logo" src={anelImage} alt="ΑΝΕΛ"></img>

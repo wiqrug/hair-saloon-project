@@ -1,24 +1,20 @@
-import "./App.css";
+// App.js
 import React from "react";
-import { PrimeReactProvider, PrimeReactContext } from "primereact/api";
-import "primereact/resources/themes/saga-blue/theme.css"; //theme
-import "primereact/resources/primereact.min.css"; //core css
-import NavbarTop from "./components/NavbarTop";
+import { PrimeReactProvider } from "primereact/api";
+import "primereact/resources/themes/saga-blue/theme.css";
+import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
+import NavbarTop from "./components/NavbarTop";
 import Navbar from "./components/Navbar";
-
-// import "primeicons/primeicons.css";
+import { LanguageProvider } from "./hooks/LanguageContext";
 
 function App() {
-  const countries = [
-    { name: "🇬🇷", code: "GR" },
-    { name: "🇺🇸", code: "EN" },
-  ];
-
   return (
     <PrimeReactProvider>
-      <NavbarTop />
-      <Navbar countries={countries} />
+      <LanguageProvider>
+        <NavbarTop />
+        <Navbar />
+      </LanguageProvider>
     </PrimeReactProvider>
   );
 }
