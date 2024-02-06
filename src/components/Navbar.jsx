@@ -4,6 +4,7 @@ import "./navbar.css";
 import anelImage from "../assets/anel.png";
 import { Dropdown } from "primereact/dropdown";
 import { useLanguage } from "../hooks/LanguageContext";
+import useDetails from "../hooks/useDetails";
 
 const Navbar = () => {
   const translatedTextNavbar = [
@@ -24,18 +25,9 @@ const Navbar = () => {
       contactUs: "CONTACT US",
     },
   ];
-  const { selectedLanguage, setSelectedLanguage, countries } = useLanguage();
 
-  const [details, setDetails] = useState(
-    translatedTextNavbar.find((lang) => lang.code == selectedLanguage.code)
-  );
-
-  useEffect(() => {
-    const newDetails = translatedTextNavbar.find(
-      (lang) => lang.code == selectedLanguage.code
-    );
-    setDetails(newDetails);
-  }, [selectedLanguage]);
+  const { countries, selectedLanguage, setSelectedLanguage, details } =
+    useDetails(translatedTextNavbar);
 
   return (
     <div className="navbar-bot">
