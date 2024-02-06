@@ -1,5 +1,3 @@
-the translation should also happen to the upper navbar, so i need to fix this
+i have problem with icons, they do not appear. 
 
-code already needs refactoring
-
-i need to use context
+something is wrong with my css
