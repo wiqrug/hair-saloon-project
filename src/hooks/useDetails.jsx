@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLanguage } from "./LanguageContext";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const useDetails = (translatedText) => {
   const { selectedLanguage, setSelectedLanguage, countries } = useLanguage();

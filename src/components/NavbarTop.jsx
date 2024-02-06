@@ -1,7 +1,25 @@
 import React from "react";
 import "./navbartop.css";
+import { useLanguage } from "../contexts/LanguageContext";
+import useDetails from "../hooks/useDetails";
 
 const NavbarTop = () => {
+  const translatedTextNavbarTop = [
+    {
+      code: "GR",
+      address: "Κιοτάρι 851 09",
+      email: "anel@msn.gr",
+      phoneNumber: "Τηλέφωνο: 6969696969",
+    },
+    {
+      code: "EN",
+      address: "Kiotari 851 09",
+      email: "anel@msn.gr",
+      phoneNumber: "Phone number: 6969696969",
+    },
+  ];
+  const { selectedLanguage, details } = useDetails(translatedTextNavbarTop);
+
   return (
     <div className="navbar-top">
       <div className="elements">
@@ -11,18 +29,18 @@ const NavbarTop = () => {
           style={{ fontSize: "16px" }}
           target="_blank"
         >
-          <p className="info"> Υμηττού 1, Χολαργός</p>
+          <p className="info"> {details.address}</p>
         </a>
         <i className="slash">/</i>
         <span className="pi pi-envelope" style={{ fontSize: "16px" }}>
-          <p className="info"> pepezerk@gmail.com</p>
+          <p className="info"> {details.email}</p>
         </span>
       </div>
 
       {/* Info/Contact us */}
       <div className="elements">
         <span className="pi pi-phone" style={{ fontSize: "16px" }}>
-          <p className="info">Τηλέφωνο: 696969696969</p>
+          <p className="info">{details.phoneNumber}</p>
         </span>
         <i className="slash">/</i>
         <a

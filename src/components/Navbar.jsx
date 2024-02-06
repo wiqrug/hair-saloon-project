@@ -3,7 +3,7 @@ import "./navbar.css";
 // @ts-ignore
 import anelImage from "../assets/anel.png";
 import { Dropdown } from "primereact/dropdown";
-import { useLanguage } from "../hooks/LanguageContext";
+import { useLanguage } from "../contexts/LanguageContext";
 import useDetails from "../hooks/useDetails";
 
 const Navbar = () => {

@@ -6,7 +6,7 @@ import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import NavbarTop from "./components/NavbarTop";
 import Navbar from "./components/Navbar";
-import { LanguageProvider } from "./hooks/LanguageContext";
+import { LanguageProvider } from "./contexts/LanguageContext";
 
 function App() {
   return (
