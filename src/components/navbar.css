@@ -1,14 +1,14 @@
 .navbar-bot {
   display: flex;
   align-items: center;
-  padding-top: 3.5rem;
+  padding-top: 1.5rem;
   padding-bottom: 1rem;
   border-bottom: solid #fffffa;
   margin-right: 10em;
   margin-left: 10em;
   height: auto;
   position: fixed;
-  top: 0;
+  top: 1;
   left: 0;
   right: 0;
   z-index: 1000;
