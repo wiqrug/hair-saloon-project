@@ -1,6 +1,5 @@
 import React from "react";
 import "./navbartop.css";
-import { useLanguage } from "../contexts/LanguageContext";
 import useDetails from "../hooks/useDetails";
 
 const NavbarTop = () => {
