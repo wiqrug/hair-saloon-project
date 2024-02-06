@@ -7,6 +7,7 @@ import { useLanguage } from "../hooks/LanguageContext";
 import useDetails from "../hooks/useDetails";
 
 const Navbar = () => {
+  //All the translated texts should start with code: "GR" or code: "EN"
   const translatedTextNavbar = [
     {
       code: "GR",
