@@ -6,7 +6,7 @@ const useClipboard = () => {
   const hideFeedbackAfterDelay = () => {
     setTimeout(() => {
       setShowCopyFeedback(false);
-    }, 2000); // Hide after 3 seconds
+    }, 2000);
   };
 
   const copyTextToClipboard = async (text) => {
