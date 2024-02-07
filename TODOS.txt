@@ -3,3 +3,6 @@ Check if its possible to make the navbar stay at the top 0 position when mouse i
 Continue with the homepage and add navigation
 
 using phone browser the style sucks. fix it
+
+
+make the image larger
