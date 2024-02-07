@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import "./navbar.css";
+
 // @ts-ignore
 import anelImage from "../assets/anel.png";
 import { Dropdown } from "primereact/dropdown";
 import { useLanguage } from "../contexts/LanguageContext";
 import useDetails from "../hooks/useDetails";
+import "./navbar.css";
 
 const Navbar = () => {
   //All the translated texts should start with code: "GR" or code: "EN"

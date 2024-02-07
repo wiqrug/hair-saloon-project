@@ -4,6 +4,7 @@ body {
 }
 .navbar-top {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   background-color: #1e73be;
   color: white;
@@ -12,7 +13,8 @@ body {
   width: 100%;
   height: 3em;
   padding-bottom: 1.5vh;
-  position: 0;
+  /* padding-bottom: rem; */
+  position: relative;
 }
 
 .elements {
@@ -99,4 +101,80 @@ body {
   padding: 10px;
   border-radius: 5px;
   z-index: 2000;
+}
+
+@media (max-width: 767px) {
+  .navbar-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #1e73be;
+    color: white;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-bottom: none;
+    height: 8rem;
+    padding-top: 0;
+  }
+
+  .elements {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0.5rem 0;
+    background-color: #1e73be;
+  }
+
+  .info,
+  .info-info {
+    font-size: 0.8rem;
+    color: white;
+    margin: 0;
+    padding: 0;
+    margin-left: 2vh;
+  }
+
+  .pi-envelope,
+  .pi-map-marker,
+  .pi-phone,
+  .pi-facebook,
+  .pi-instagram {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+  }
+
+  .slash {
+    font-size: 1.2rem;
+    color: white;
+    margin: 0 0.5rem;
+    align-self: center;
+    padding-top: 1em;
+  }
+
+  .pi-map-marker + .info,
+  .pi-envelope + .info {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .pi-facebook:hover,
+  .pi-instagram:hover {
+    transform: scale(1.1);
+    color: #f4f4f4;
+  }
+
+  .copy-feedback {
+    background-color: #333;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2000;
+  }
 }
