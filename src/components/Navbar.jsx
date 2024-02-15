@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 // @ts-ignore
 import anelImage from "../assets/anel.png";
 import { Dropdown } from "primereact/dropdown";
-import { useLanguage } from "../contexts/LanguageContext";
 import useDetails from "../hooks/useDetails";
 import "./navbar.css";
 
@@ -37,7 +36,11 @@ const Navbar = () => {
       {details &&
         Object.entries(details).map(([key, value]) => {
           if (key !== "code") {
-            return <p key={key}>{value}</p>;
+            return (
+              <p className="menu-items" key={key}>
+                {value}
+              </p>
+            );
           }
         })}
       <Dropdown
