@@ -178,3 +178,9 @@ body {
     z-index: 2000;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar-top {
+    padding-bottom: 11vh;
+  }
+}

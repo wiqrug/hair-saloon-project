@@ -71,3 +71,9 @@
     width: 100%;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar-bot {
+    margin-right: 25em;
+  }
+}
