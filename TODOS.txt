@@ -1,8 +1,7 @@
 Check if its possible to make the navbar stay at the top 0 position when mouse is scrolling down instead of 1.
 
-Continue with the homepage and add navigation
-
-using phone browser the style sucks. fix it
+Using mobile first approach, continue creating each page seperately.
 
 
-make the image larger
+
+So, if im using phone, i need to hide the current navbar and use a different one, because the style is not there.

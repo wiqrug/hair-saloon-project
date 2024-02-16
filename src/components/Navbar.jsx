@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 // @ts-ignore
 import anelImage from "../assets/anel.png";
@@ -30,6 +30,12 @@ const Navbar = () => {
   const { countries, selectedLanguage, setSelectedLanguage, details } =
     useDetails(translatedTextNavbar);
 
+  //This div that is being returned, should be a different component.
+  //Also i need to make a new component that is the navbar for the mobile phone.
+
+  //Make an event listener to see the width of the screen.
+  //If its mobile, render one component, else render the other component
+
   return (
     <div className="navbar-bot">
       <img className="image-logo" src={anelImage} alt="ΑΝΕΛ"></img>
@@ -43,6 +49,7 @@ const Navbar = () => {
             );
           }
         })}
+
       <Dropdown
         value={selectedLanguage}
         onChange={(e) => setSelectedLanguage(e.value)}
