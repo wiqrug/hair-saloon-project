@@ -37,7 +37,13 @@ const Navbar = () => {
 
   // @ts-ignore
   return isMobile ? (
-    <MobileNavbar />
+    <MobileNavbar
+      anelImage={anelImage}
+      details={details}
+      selectedLanguage={selectedLanguage}
+      setSelectedLanguage={setSelectedLanguage}
+      countries={countries}
+    />
   ) : (
     <DesktopNavbar
       anelImage={anelImage}
