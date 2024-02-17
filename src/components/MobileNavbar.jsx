@@ -28,7 +28,6 @@ const MobileNavbar = ({
       </div>
       {menuOpen && (
         <div className="menu-items-container active">
-          {/* Render your menu items here */}
           <p>Home</p>
           <p>About Us</p>
           <p>Services</p>
