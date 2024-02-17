@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./mobile-navbar.css";
 import { Dropdown } from "primereact/dropdown";
+import useNavbarNavigate from "../../hooks/useNavbarNavigate";
 
 const MobileNavbar = ({
   anelImage,
@@ -12,6 +13,8 @@ const MobileNavbar = ({
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  const handleNavigate = useNavbarNavigate();
 
   return (
     <div className="mobile-navbar-container">
@@ -37,6 +40,7 @@ const MobileNavbar = ({
                       className={`mobile-menu menu-item`}
                       style={{ animationDelay: `${index * 0.2}s` }}
                       key={key}
+                      onClick={() => handleNavigate(key)}
                     >
                       {value}
                     </p>
