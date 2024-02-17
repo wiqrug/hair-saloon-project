@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 // @ts-ignore
 import anelImage from "../assets/anel.png";
@@ -6,6 +6,7 @@ import { Dropdown } from "primereact/dropdown";
 import useDetails from "../hooks/useDetails";
 import "./navbar.css";
 import DesktopNavbar from "./DesktopNavbar";
+import MobileNavbar from "./MobileNavbar";
 
 const Navbar = () => {
   //All the translated texts should start with code: "GR" or code: "EN"
@@ -31,14 +32,21 @@ const Navbar = () => {
   const { countries, selectedLanguage, setSelectedLanguage, details } =
     useDetails(translatedTextNavbar);
 
-  //This div that is being returned, should be a different component.
-  //Also i need to make a new component that is the navbar for the mobile phone.
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
-  //Make an event listener to see the width of the screen.
-  //If its mobile, render one component, else render the other component
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return window.removeEventListener("resize", handleResize);
+  });
 
   // @ts-ignore
-  return (
+  return isMobile ? (
+    <MobileNavbar />
+  ) : (
     <DesktopNavbar
       anelImage={anelImage}
       details={details}

@@ -5,7 +5,6 @@ import { Toast } from "primereact/toast";
 
 export default function PopupDoc() {
   const menuLeft = useRef(null);
-  const menuRight = useRef(null);
   const toast = useRef(null);
   const items = [
     {
