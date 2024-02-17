@@ -1,6 +1,7 @@
 import { Dropdown } from "primereact/dropdown";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import useNavbarNavigate from "../../hooks/useNavbarNavigate";
 
 const DesktopNavbar = ({
   anelImage,
@@ -9,29 +10,30 @@ const DesktopNavbar = ({
   setSelectedLanguage,
   countries,
 }) => {
-  const navigate = useNavigate();
+  const handleNavigate = useNavbarNavigate();
+  // const navigate = useNavigate();
 
-  const handleNavigate = (key) => {
-    if (key === "home") {
-      navigate("/home");
-    }
-    if (key === "aboutUs") {
-      navigate("/about-us");
-    }
-    if (key === "services") {
-      navigate("/services");
-    }
-    if (key === "photoGallery") {
-      navigate("/photos");
-    }
-    if (key === "contactUs") {
-      navigate("/contact-us");
-    }
-  };
+  // const handleNavigate = (key) => {
+  //   if (key === "home") {
+  //     navigate("/home");
+  //   }
+  //   if (key === "aboutUs") {
+  //     navigate("/about-us");
+  //   }
+  //   if (key === "services") {
+  //     navigate("/services");
+  //   }
+  //   if (key === "photoGallery") {
+  //     navigate("/photos");
+  //   }
+  //   if (key === "contactUs") {
+  //     navigate("/contact-us");
+  //   }
+  // };
 
   return (
     <div className="navbar-bot">
-      <img className="image-logo" src={anelImage} alt="ΑΝΕΛ"></img>
+      <img className="image-logo" src={anelImage} alt="Logo"></img>
       {details &&
         Object.entries(details).map(([key, value]) => {
           if (key !== "code") {
@@ -45,8 +47,8 @@ const DesktopNavbar = ({
               </p>
             );
           }
+          return null;
         })}
-
       <Dropdown
         value={selectedLanguage}
         onChange={(e) => setSelectedLanguage(e.value)}
