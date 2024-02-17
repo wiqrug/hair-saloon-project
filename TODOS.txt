@@ -7,3 +7,10 @@ Using mobile first approach, continue creating each page seperately.
 
 mobile navbar has no animation when it closes, it could have one.
 
+
+
+next step is to:
+
+    ~ Add navigation for each component and just test it with a sample div.
+    ~ If it works, start with one page, for example contact us. And make these reusable.
+    ~ Also while creating these pages, i need to also create the footer which will be common for all pages.

@@ -7,7 +7,6 @@ import "primeicons/primeicons.css";
 import NavbarTop from "./components/NavbarTop";
 import Navbar from "./components/Navbar";
 import { LanguageProvider } from "./contexts/LanguageContext";
-import PopupDoc from "./components/PopupDoc";
 
 function App() {
   return (

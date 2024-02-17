@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./mobile-navbar.css";
-import { Dropdown } from "primereact/dropdown"; // Ensure you have this imported
+import { Dropdown } from "primereact/dropdown";
 
 const MobileNavbar = ({
   anelImage,
