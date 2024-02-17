@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 // @ts-ignore
-import anelImage from "../assets/anel.png";
-import { Dropdown } from "primereact/dropdown";
-import useDetails from "../hooks/useDetails";
+import anelImage from "../../assets/anel.png";
+import useDetails from "../../hooks/useDetails";
 import "./navbar.css";
 import DesktopNavbar from "./DesktopNavbar";
 import MobileNavbar from "./MobileNavbar";
-import useIsMobile from "../hooks/useIsMobile";
+import useIsMobile from "../../hooks/useIsMobile";
 
 const Navbar = () => {
   //All the translated texts should start with code: "GR" or code: "EN"
