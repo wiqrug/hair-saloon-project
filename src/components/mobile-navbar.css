@@ -1,27 +1,35 @@
 .mobile-navbar-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-bar {
+  display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
 .mobile-image-logo {
   width: 7rem;
-  height: 14vh;
-
+  height: auto;
   margin-left: 1rem;
-  margin-top: 1rem;
 }
 
 .menu-bar-container {
-  display: inline-block;
   cursor: pointer;
-  margin-top: 3rem;
-  margin-left: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 1rem;
 }
+
 .bar1,
 .bar2,
 .bar3 {
-  width: 45px;
+  width: 35px;
   height: 5px;
   background-color: #333;
   margin: 6px 0;
@@ -29,7 +37,8 @@
 }
 
 .change .bar1 {
-  transform: translate(0, 11px) rotate(-45deg);
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
 }
 
 .change .bar2 {
@@ -37,5 +46,20 @@
 }
 
 .change .bar3 {
-  transform: translate(0, -11px) rotate(45deg);
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.menu-items-container {
+  width: 100%;
+  display: none;
+}
+
+.menu-items-container.active {
+  display: block;
+}
+
+.dropdown-container {
+  width: 90%;
+  margin-top: 1rem;
 }
