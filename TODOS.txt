@@ -2,6 +2,8 @@ Check if its possible to make the navbar stay at the top 0 position when mouse i
 
 Using mobile first approach, continue creating each page seperately.
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-So, if im using phone, i need to hide the current navbar and use a different one, because the style is not there.
+mobile navbar has no animation when it closes, it could have one.
+
