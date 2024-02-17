@@ -7,6 +7,7 @@ import useDetails from "../hooks/useDetails";
 import "./navbar.css";
 import DesktopNavbar from "./DesktopNavbar";
 import MobileNavbar from "./MobileNavbar";
+import useIsMobile from "../hooks/useIsMobile";
 
 const Navbar = () => {
   //All the translated texts should start with code: "GR" or code: "EN"
@@ -32,16 +33,7 @@ const Navbar = () => {
   const { countries, selectedLanguage, setSelectedLanguage, details } =
     useDetails(translatedTextNavbar);
 
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return window.removeEventListener("resize", handleResize);
-  });
+  const isMobile = useIsMobile();
 
   // @ts-ignore
   return isMobile ? (
