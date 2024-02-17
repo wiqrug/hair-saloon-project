@@ -28,11 +28,25 @@ const MobileNavbar = ({
       </div>
       {menuOpen && (
         <div className="menu-items-container active">
-          <p>Home</p>
-          <p>About Us</p>
-          <p>Services</p>
-          <p>Contact Us</p>
-          <div className="dropdown-container">
+          {details &&
+            Object.entries(details).map(([key, value], index) => {
+              if (key !== "code") {
+                return (
+                  <>
+                    <p
+                      className={`menu-item`}
+                      style={{ animationDelay: `${index * 0.2}s` }}
+                      key={key}
+                    >
+                      {value}
+                    </p>
+                  </>
+                );
+              }
+
+              return null;
+            })}
+          <div className="mobile-dropdown dropdown-container">
             <Dropdown
               value={selectedLanguage}
               onChange={(e) => setSelectedLanguage(e.value)}

@@ -57,9 +57,38 @@
 
 .menu-items-container.active {
   display: block;
+  margin-left: 3rem;
 }
 
 .dropdown-container {
   width: 90%;
   margin-top: 1rem;
+}
+
+.mobile-menu {
+  border-bottom: solid 1px;
+  border-bottom-color: rgba(128, 128, 128, 0.479);
+  margin-right: 4rem;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.menu-item {
+  animation: slideIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.mobile-dropdown {
+  animation: slideIn 0.5s ease-out forwards;
+  animation-delay: 1.3s;
+  opacity: 0;
 }
