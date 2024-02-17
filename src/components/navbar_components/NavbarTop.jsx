@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./navbartop.css";
 import useDetails from "../../hooks/useDetails";
 import useClipboard from "../../hooks/useClipboard";
