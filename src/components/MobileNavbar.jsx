@@ -34,7 +34,7 @@ const MobileNavbar = ({
                 return (
                   <>
                     <p
-                      className={`menu-item`}
+                      className={`mobile-menu menu-item`}
                       style={{ animationDelay: `${index * 0.2}s` }}
                       key={key}
                     >
