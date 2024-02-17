@@ -11,25 +11,6 @@ const DesktopNavbar = ({
   countries,
 }) => {
   const handleNavigate = useNavbarNavigate();
-  // const navigate = useNavigate();
-
-  // const handleNavigate = (key) => {
-  //   if (key === "home") {
-  //     navigate("/home");
-  //   }
-  //   if (key === "aboutUs") {
-  //     navigate("/about-us");
-  //   }
-  //   if (key === "services") {
-  //     navigate("/services");
-  //   }
-  //   if (key === "photoGallery") {
-  //     navigate("/photos");
-  //   }
-  //   if (key === "contactUs") {
-  //     navigate("/contact-us");
-  //   }
-  // };
 
   return (
     <div className="navbar-bot">
