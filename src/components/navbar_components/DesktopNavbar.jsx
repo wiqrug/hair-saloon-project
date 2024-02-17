@@ -1,5 +1,6 @@
 import { Dropdown } from "primereact/dropdown";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const DesktopNavbar = ({
   anelImage,
@@ -8,6 +9,26 @@ const DesktopNavbar = ({
   setSelectedLanguage,
   countries,
 }) => {
+  const navigate = useNavigate();
+
+  const handleNavigate = (key) => {
+    if (key === "home") {
+      navigate("/home");
+    }
+    if (key === "aboutUs") {
+      navigate("/about-us");
+    }
+    if (key === "services") {
+      navigate("/services");
+    }
+    if (key === "photoGallery") {
+      navigate("/photos");
+    }
+    if (key === "contactUs") {
+      navigate("/contact-us");
+    }
+  };
+
   return (
     <div className="navbar-bot">
       <img className="image-logo" src={anelImage} alt="ΑΝΕΛ"></img>
@@ -15,7 +36,11 @@ const DesktopNavbar = ({
         Object.entries(details).map(([key, value]) => {
           if (key !== "code") {
             return (
-              <p className="menu-items" key={key}>
+              <p
+                className="menu-items"
+                key={key}
+                onClick={() => handleNavigate(key)}
+              >
                 {value}
               </p>
             );
