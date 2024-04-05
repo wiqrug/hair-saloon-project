@@ -16,6 +16,9 @@ import {
 } from "./components";
 
 function App() {
+  //This can be refactored, by having an array of objects called route store the path and the elements
+  //and then iterate through this array using map, to generate these components.
+  //The reason im not doing it right now, is because these components might need some properties
   return (
     <PrimeReactProvider>
       <LanguageProvider>

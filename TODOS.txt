@@ -14,3 +14,7 @@ next step is to:
         ~Navbar should stay on top while scrolling. Fix this!
         ~Maybe adjust paths to have 2 languages depending on the users choice.
         ~Think about adding a timer to navbar (to close after 5seconds)
+
+
+Add pages folder and seperate pages from components, so navbar_components doesnt need to exist as a folder
+
