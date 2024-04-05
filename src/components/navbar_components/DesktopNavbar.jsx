@@ -1,6 +1,5 @@
 import { Dropdown } from "primereact/dropdown";
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import useNavbarNavigate from "../../hooks/useNavbarNavigate";
 
 const DesktopNavbar = ({
